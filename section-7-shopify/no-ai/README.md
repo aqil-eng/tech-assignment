@@ -21,13 +21,13 @@ Refer to [../README.md](../README.md) for the full questions.
 ## 7.2 — Theme Development
 
 **1. Describe the structure of a Shopify Online Store 2.0 theme.**
-> Answer:
+> Answer: Consists of JSON templates to enable "sections everywhere" on the pages. There are also another components such as Sections, Blocks and Layouts
 
 **2. Walk through adding a custom metafield-driven content section.**
-> Answer:
+> Answer: Go to Setting add custom field definition and then on the products to fill the field and finally on the theme editor to add to the online store
 
 **3. Explain how `settings_schema.json` differs from a section's `{% schema %}`.**
-> Answer:
+> Answer: 
 
 ---
 

@@ -10,6 +10,46 @@ Refer to [../README.md](../README.md) for the full questions.
 
 ```ts
 // Write your hook + usage example here
+import {useState, useEffect, useRef} from 'react'
+
+function useDebounce<T>(value: T, delay:number): T  {
+    const [searchTerm, setSearchTerm] = useState('')
+    const timeoutRef = useRef() 
+
+    useEffect(()=>{
+        if (timeoutRef.current){
+            clearTimeout(timeoutRef.current)
+        }
+
+        timeoutRef.current = seTtimeout(()=>{
+            setSearchTerm(prevVal => {
+                if (prevVal === value) return prevVal
+            })
+        },[delay])
+
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeiyt(timeoutRef.current)
+            }
+        }
+    },[searchTerm, delay])
+
+    return searchTerm
+}
+
+// usage
+const List = () => {
+    const [search, setSearch] = useState('')
+    const debounced = useDebounce(search, 500)
+    const [data, setData] = useState([])
+
+    useEffect(()=>{
+        if(debounced) {
+            const res = axios.get(`url?${debounced}`)
+            setData = res.data.data
+        }
+    },[debounced])
+}
 ```
 
 ---
@@ -18,4 +58,7 @@ Refer to [../README.md](../README.md) for the full questions.
 
 ```tsx
 // Write types + component implementation here
+import {useState, useEffect, useRef, useMemo} from 'react'
+
+
 ```

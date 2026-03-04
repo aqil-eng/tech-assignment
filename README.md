@@ -6,8 +6,8 @@
 
 # Software Engineering Technical Assessment
 
-**Candidate Name:** _your name here_
-**Date:** _assessment date_
+**Candidate Name:** Raditya Aqil
+**Date:** 04-03-2026
 
 ---
 

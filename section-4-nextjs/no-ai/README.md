@@ -30,6 +30,13 @@ Refer to [../README.md](../README.md) for the full questions.
 
 ```ts
 // Write the server action here
+import { z } from 'zod'
+
+const productSchema = z.object({
+    name: z.string().min(1, "name is required"),
+    price: z.number().min(0, "price is required"),
+    description: z.string().min(1, "description required"),
+})
 ```
 
 ```tsx
